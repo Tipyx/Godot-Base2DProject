@@ -1,0 +1,17 @@
+[gd_scene load_steps=6 format=3 uid="uid://w41drdgm3mjw"]
+
+[ext_resource type="Script" path="res://Main.gd" id="1_qarpr"]
+[ext_resource type="PackedScene" uid="uid://csc7lrmlgcuyp" path="res://tools/Transition.tscn" id="2_lndso"]
+[ext_resource type="PackedScene" uid="uid://dch225scswpa0" path="res://screens/Title.tscn" id="3_62xda"]
+[ext_resource type="PackedScene" uid="uid://bnxm55nhexfjk" path="res://screens/EndLevel.tscn" id="4_xctpr"]
+[ext_resource type="PackedScene" uid="uid://bc0ubsp885ate" path="res://screens/Level.tscn" id="5_6e6c5"]
+
+[node name="Main" type="Node2D" node_paths=PackedStringArray("scenes_wrapper")]
+script = ExtResource("1_qarpr")
+transition_ps = ExtResource("2_lndso")
+title_screen_ps = ExtResource("3_62xda")
+end_level_ps = ExtResource("4_xctpr")
+level_ps = ExtResource("5_6e6c5")
+scenes_wrapper = NodePath("ScenesWrapper")
+
+[node name="ScenesWrapper" type="Node2D" parent="."]
